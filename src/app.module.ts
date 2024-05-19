@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ClubEntity } from './club/club.entity';
 import { SocioEntity } from './socio/socio.entity';
+import { ClubSocioModule } from './club-socio/club-socio.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
@@ -19,6 +20,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true,
       keepConnectionAlive: true
     }),
+    ClubSocioModule,
   ],
   controllers: [AppController],
   providers: [AppService],

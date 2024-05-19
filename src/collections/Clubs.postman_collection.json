@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "f79ddf6b-d3b9-42b6-9eaa-fcce8562348e",
+		"name": "Clubs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34400920",
+		"_collection_link": "https://estudiandes.postman.co/workspace/Parcial-2~5e353926-a6c6-4e16-9647-9a1a02c13ade/collection/34400920-f79ddf6b-d3b9-42b6-9eaa-fcce8562348e?action=share&source=collection_link&creator=34400920"
+	},
+	"item": [
+		{
+			"name": "Add a club",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1928\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy buen lugar.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/clubs",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a club",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1928\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy buen lugar.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/clubs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"clubs"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClub\": \"aldfjkshadfasf2983342\",\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1928\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy buen lugar.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all clubs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/clubs",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all clubs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idClub\": \"aldfjkshadfasf2983342\",\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1928\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy buen lugar.\",\n    \"socios\": [\n    {\n        \"id\": \"234982349283asdasdf\",\n        \"nombre\": \"Alvarinaitor\",\n        \"correo\": \"alva@gmail.com\",\n        \"fechaNacimiento\": \"20/04/2001\"\n    },\n    {\n        \"id\": \"23498232383sdasdf\",\n        \"nombre\": \"Juanjonaitor\",\n        \"correo\": \"juan@gmail.com\",\n        \"fechaNacimiento\": \"21/04/2001\"\n    }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/clubs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"clubs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClub\": \"aldfjkshadfasf2983342\",\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1928\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy buen lugar.\",\n    \"socios\": [\n        {\n            \"id\": \"234982349283asdasdf\",\n            \"nombre\": \"Alvarinaitor\",\n            \"correo\": \"alva@gmail.com\",\n            \"fechaNacimiento\": \"20/04/2001\"\n        },\n        {\n            \"id\": \"23498232383sdasdf\",\n            \"nombre\": \"Juanjonaitor\",\n            \"correo\": \"juan@gmail.com\",\n            \"fechaNacimiento\": \"21/04/2001\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get club",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/clubs/{{club_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs",
+						"{{club_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get club",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClub\": \"aldfjkshadfasf2983342\",\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1928\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy buen lugar.\",\n    \"socios\": [\n        {\n            \"id\": \"234982349283asdasdf\",\n            \"nombre\": \"Alvarinaitor\",\n            \"correo\": \"alva@gmail.com\",\n            \"fechaNacimiento\": \"20/04/2001\"\n        },\n        {\n            \"id\": \"23498232383sdasdf\",\n            \"nombre\": \"Juanjonaitor\",\n            \"correo\": \"juan@gmail.com\",\n            \"fechaNacimiento\": \"21/04/2001\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get invalid club",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/clubs/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get invalid club",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/clubs/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"clubs",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The club with the given id was not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update club",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1948\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy excelente lugar.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/clubs/{{club_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs",
+						"{{club_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update club",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1948\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy excelente lugar.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/clubs/{{club_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"clubs",
+								"{{club_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClub\": \"aldfjkshadfasf2983342\",\n    \"nombreClub\": \"Los lagartos\",\n    \"fechaFundacion\": \"1948\",\n    \"imagen\": \"http://imagen.com\",\n    \"descripcion\": \"Muy excelente lugar.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update invalid club",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/clubs/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update invalid club",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/clubs/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"clubs",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The club with the given id was not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete club",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/clubs/{{club_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs",
+						"{{club_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete club",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Delete invalid club",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/clubs/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"clubs",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete invalid club",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The club with the given id was not found\"\n}"
+				}
+			]
+		}
+	]
+}
